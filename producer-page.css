@@ -1,0 +1,608 @@
+/* ========================================
+   生産者情報ページ - 専用スタイル
+   ======================================== */
+
+/* ----------------------------------------
+   ページヒーロー
+   ---------------------------------------- */
+.page-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--header-height);
+    overflow: hidden;
+}
+
+.page-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: var(--white);
+}
+
+.page-hero-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.page-hero-title {
+    font-family: var(--font-accent);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+}
+
+.page-hero-subtitle {
+    font-family: var(--font-accent);
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    .page-hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .page-hero-title {
+        font-size: 3.5rem;
+    }
+
+    .page-hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* ----------------------------------------
+   パンくずリスト
+   ---------------------------------------- */
+.breadcrumb {
+    background: var(--gray-100);
+    padding: 15px 0;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8125rem;
+    color: var(--gray-600);
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '>';
+    color: var(--gray-400);
+}
+
+.breadcrumb a {
+    color: var(--gray-600);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+}
+
+/* ----------------------------------------
+   イントロセクション
+   ---------------------------------------- */
+.producer-intro {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.intro-logo {
+    width: 200px;
+    height: 200px;
+}
+
+.intro-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.intro-text h2 {
+    font-family: var(--font-accent);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 25px;
+    letter-spacing: 0.1em;
+}
+
+.intro-lead {
+    font-size: 1.0625rem;
+    line-height: 2;
+    color: var(--gray-700);
+}
+
+@media (min-width: 768px) {
+    .producer-intro {
+        padding: 100px 0;
+    }
+
+    .intro-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 60px;
+    }
+
+    .intro-logo {
+        flex: 0 0 250px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .intro-text {
+        flex: 1;
+    }
+
+    .intro-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .intro-lead {
+        font-size: 1.125rem;
+    }
+}
+
+/* ----------------------------------------
+   あまおうセクション
+   ---------------------------------------- */
+.amaou-section {
+    padding: 80px 0;
+    background: var(--cream);
+}
+
+.amaou-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.amaou-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.amaou-img {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.amaou-img.main {
+    grid-column: span 2;
+}
+
+.amaou-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.amaou-img.main img {
+    height: 250px;
+}
+
+.amaou-text h3 {
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 25px;
+}
+
+.amaou-meaning {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.meaning-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.meaning-item .letter {
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.meaning-item .word {
+    font-size: 0.8125rem;
+    color: var(--gray-600);
+}
+
+.amaou-text p {
+    color: var(--gray-700);
+    margin-bottom: 15px;
+    line-height: 1.9;
+}
+
+@media (min-width: 768px) {
+    .amaou-section {
+        padding: 120px 0;
+    }
+
+    .amaou-img img {
+        height: 250px;
+    }
+
+    .amaou-img.main img {
+        height: 350px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .amaou-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 70px;
+    }
+
+    .amaou-images {
+        flex: 0 0 45%;
+    }
+
+    .amaou-text {
+        flex: 1;
+    }
+
+    .amaou-text h3 {
+        font-size: 1.75rem;
+    }
+
+    .amaou-meaning {
+        gap: 20px;
+    }
+}
+
+/* ----------------------------------------
+   農園セクション
+   ---------------------------------------- */
+.farm-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.farm-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.farm-img {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.farm-img.large {
+    grid-column: span 2;
+}
+
+.farm-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.farm-img.large img {
+    height: 250px;
+}
+
+.farm-img:hover img {
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .farm-section {
+        padding: 120px 0;
+    }
+
+    .farm-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .farm-img.large {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .farm-img img {
+        height: 200px;
+    }
+
+    .farm-img.large img {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .farm-gallery {
+        gap: 25px;
+    }
+
+    .farm-img img {
+        height: 250px;
+    }
+}
+
+/* ----------------------------------------
+   こだわりセクション
+   ---------------------------------------- */
+.commitment-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--cream) 100%);
+}
+
+.commitment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.commitment-text h3 {
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.commitment-text p {
+    color: var(--gray-700);
+    margin-bottom: 15px;
+    line-height: 1.9;
+}
+
+.commitment-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.commitment-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .commitment-section {
+        padding: 120px 0;
+    }
+
+    .commitment-image img {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .commitment-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .commitment-text {
+        flex: 1;
+    }
+
+    .commitment-text h3 {
+        font-size: 1.75rem;
+    }
+
+    .commitment-image {
+        flex: 0 0 45%;
+    }
+
+    .commitment-image img {
+        height: 450px;
+    }
+}
+
+/* ----------------------------------------
+   スムージーセクション
+   ---------------------------------------- */
+.smoothie-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.smoothie-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.smoothie-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.smoothie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.smoothie-section .container {
+    position: relative;
+    z-index: 10;
+}
+
+.smoothie-content {
+    text-align: center;
+    color: var(--white);
+}
+
+.smoothie-content h3 {
+    font-family: var(--font-accent);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.smoothie-content p {
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+.smoothie-btn {
+    display: inline-block;
+    padding: 16px 45px;
+    background: var(--primary);
+    color: var(--white);
+    font-weight: 500;
+    border-radius: 50px;
+    transition: var(--transition-normal);
+}
+
+.smoothie-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+}
+
+@media (min-width: 768px) {
+    .smoothie-section {
+        padding: 150px 0;
+    }
+
+    .smoothie-content h3 {
+        font-size: 2.25rem;
+    }
+
+    .smoothie-content p {
+        font-size: 1.125rem;
+    }
+}
+
+/* ----------------------------------------
+   ページCTA
+   ---------------------------------------- */
+.page-cta {
+    padding: 80px 0;
+    background: var(--primary);
+    text-align: center;
+    color: var(--white);
+}
+
+.page-cta h2 {
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.page-cta p {
+    font-size: 0.9375rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.page-cta .cta-btn {
+    display: inline-block;
+    padding: 16px 45px;
+    background: var(--white);
+    color: var(--primary);
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition-normal);
+}
+
+.page-cta .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .page-cta {
+        padding: 100px 0;
+    }
+
+    .page-cta h2 {
+        font-size: 2rem;
+    }
+
+    .page-cta p {
+        font-size: 1.0625rem;
+    }
+}
