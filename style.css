@@ -1778,3 +1778,130 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ----------------------------------------
+   ブログセクション
+   ---------------------------------------- */
+.blog {
+    padding: 80px 0;
+    background: var(--cream);
+}
+
+.blog-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: -20px auto 50px;
+    color: var(--gray-700);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.blog-card {
+    display: block;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.blog-card-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.blog-card:hover .blog-card-img img {
+    transform: scale(1.05);
+}
+
+.blog-card-content {
+    padding: 25px;
+}
+
+.blog-date {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+
+.blog-card-title {
+    font-family: var(--font-accent);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.blog-excerpt {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-btn {
+    display: inline-block;
+    padding: 16px 45px;
+    background: var(--gray-900);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    border-radius: 50px;
+    transition: var(--transition-normal);
+}
+
+.blog-btn:hover {
+    background: var(--gray-800);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .blog {
+        padding: 120px 0;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .blog-card-img {
+        height: 220px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .blog-card-title {
+        font-size: 1.25rem;
+    }
+}
