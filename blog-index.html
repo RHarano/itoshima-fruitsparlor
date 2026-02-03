@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="糸島フルーツパーラーのブログ。出店情報や季節のフルーツ、スムージーの紹介など様々な情報を発信しています。">
+    <meta name="keywords" content="糸島フルーツパーラー,ブログ,糸島,福岡,スムージー,出店情報">
+    <meta property="og:title" content="ブログ | 糸島フルーツパーラー">
+    <meta property="og:description" content="糸島フルーツパーラーの日々の活動や季節のフルーツ情報をお届けします。">
+    <meta property="og:type" content="website">
+    <title>ブログ | 糸島フルーツパーラー</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-main">糸島フルーツパーラー</span>
+                <span class="logo-sub">ITOSHIMA FRUITS PARLOR</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#company">会社概要</a></li>
+                    <li><a href="../index.html#about">私たちについて</a></li>
+                    <li><a href="../index.html#products">商品情報</a></li>
+                    <li><a href="../index.html#producer">生産者情報</a></li>
+                    <li><a href="../index.html#works">出店実績</a></li>
+                    <li><a href="./">ブログ</a></li>
+                    <li><a href="../index.html#contact" class="nav-contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ページヒーロー -->
+    <section class="page-hero blog-hero">
+        <div class="page-hero-bg">
+            <img src="../img/S__25673750_0.jpg" alt="糸島フルーツパーラー ブログ" loading="eager">
+        </div>
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <p class="page-hero-label">Blog</p>
+            <h1 class="page-hero-title">ブログ</h1>
+            <p class="page-hero-subtitle">日々の活動や季節のフルーツ情報</p>
+        </div>
+    </section>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">ホーム</a></li>
+                <li>ブログ</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="blog-page">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- 記事一覧 -->
+                <div class="blog-main">
+                    <!-- カテゴリーフィルター -->
+                    <div class="blog-categories">
+                        <button class="category-btn active" data-category="all">すべて</button>
+                        <button class="category-btn" data-category="event">出店情報</button>
+                        <button class="category-btn" data-category="fruits">フルーツ情報</button>
+                        <button class="category-btn" data-category="report">出店レポート</button>
+                        <button class="category-btn" data-category="news">お知らせ</button>
+                    </div>
+
+                    <!-- 記事グリッド -->
+                    <div class="blog-posts">
+                        <!-- 記事カード1（サンプル） -->
+                        <article class="post-card" data-category="event">
+                            <a href="post-sample.html" class="post-card-link">
+                                <div class="post-card-img">
+                                    <img src="../img/S__25673797_0.jpg" alt="記事タイトル" loading="lazy">
+                                    <span class="post-category">出店情報</span>
+                                </div>
+                                <div class="post-card-content">
+                                    <time class="post-date" datetime="2026-02-01">2026.02.01</time>
+                                    <h2 class="post-title">2月の出店スケジュールのお知らせ</h2>
+                                    <p class="post-excerpt">2月の出店予定をお知らせします。今月は糸島市内を中心に、福岡市内のイベントにも出店予定です...</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- 記事カード2（サンプル） -->
+                        <article class="post-card" data-category="fruits">
+                            <a href="post-sample.html" class="post-card-link">
+                                <div class="post-card-img">
+                                    <img src="../img/S__25673789_0.jpg" alt="記事タイトル" loading="lazy">
+                                    <span class="post-category">フルーツ情報</span>
+                                </div>
+                                <div class="post-card-content">
+                                    <time class="post-date" datetime="2026-01-25">2026.01.25</time>
+                                    <h2 class="post-title">今が旬！糸島あまおうの魅力</h2>
+                                    <p class="post-excerpt">1月〜3月は糸島産あまおうの最盛期。甘くてジューシーなあまおうをたっぷり使ったスムージーは...</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- 記事カード3（サンプル） -->
+                        <article class="post-card" data-category="report">
+                            <a href="post-sample.html" class="post-card-link">
+                                <div class="post-card-img">
+                                    <img src="../img/S__25673762_0.jpg" alt="記事タイトル" loading="lazy">
+                                    <span class="post-category">出店レポート</span>
+                                </div>
+                                <div class="post-card-content">
+                                    <time class="post-date" datetime="2026-01-20">2026.01.20</time>
+                                    <h2 class="post-title">JR博多シティでの出店レポート</h2>
+                                    <p class="post-excerpt">先週末のJR博多シティでの出店の様子をお届けします。たくさんのお客様にご来店いただき...</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- 記事カード4（サンプル） -->
+                        <article class="post-card" data-category="news">
+                            <a href="post-sample.html" class="post-card-link">
+                                <div class="post-card-img">
+                                    <img src="../img/S__25673746_0.jpg" alt="記事タイトル" loading="lazy">
+                                    <span class="post-category">お知らせ</span>
+                                </div>
+                                <div class="post-card-content">
+                                    <time class="post-date" datetime="2026-01-15">2026.01.15</time>
+                                    <h2 class="post-title">ホームページをリニューアルしました</h2>
+                                    <p class="post-excerpt">この度、糸島フルーツパーラーのホームページをリニューアルいたしました。より見やすく...</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- 記事カード5（サンプル） -->
+                        <article class="post-card" data-category="event">
+                            <a href="post-sample.html" class="post-card-link">
+                                <div class="post-card-img">
+                                    <img src="../img/S__25673799_0.jpg" alt="記事タイトル" loading="lazy">
+                                    <span class="post-category">出店情報</span>
+                                </div>
+                                <div class="post-card-content">
+                                    <time class="post-date" datetime="2026-01-10">2026.01.10</time>
+                                    <h2 class="post-title">1月の出店スケジュール</h2>
+                                    <p class="post-excerpt">新年あけましておめでとうございます。1月の出店予定をお知らせします。今月も各地で...</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- 記事カード6（サンプル） -->
+                        <article class="post-card" data-category="fruits">
+                            <a href="post-sample.html" class="post-card-link">
+                                <div class="post-card-img">
+                                    <img src="../img/LINE_NOTE_260203_8.jpg" alt="記事タイトル" loading="lazy">
+                                    <span class="post-category">フルーツ情報</span>
+                                </div>
+                                <div class="post-card-content">
+                                    <time class="post-date" datetime="2025-12-20">2025.12.20</time>
+                                    <h2 class="post-title">冬のおすすめスムージー3選</h2>
+                                    <p class="post-excerpt">寒い季節にもぴったりの、身体を温めるスムージーをご紹介。いちごやみかんなど...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- ページネーション -->
+                    <nav class="pagination">
+                        <span class="pagination-current">1</span>
+                        <a href="#" class="pagination-link">2</a>
+                        <a href="#" class="pagination-link">3</a>
+                        <span class="pagination-dots">...</span>
+                        <a href="#" class="pagination-link">10</a>
+                        <a href="#" class="pagination-next">
+                            <span>次へ</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"/>
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- サイドバー -->
+                <aside class="blog-sidebar">
+                    <!-- 検索 -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">検索</h3>
+                        <form class="search-form">
+                            <input type="search" placeholder="キーワードを入力" class="search-input">
+                            <button type="submit" class="search-btn" aria-label="検索">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- カテゴリー -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="#">出店情報 <span class="count">(12)</span></a></li>
+                            <li><a href="#">フルーツ情報 <span class="count">(8)</span></a></li>
+                            <li><a href="#">出店レポート <span class="count">(15)</span></a></li>
+                            <li><a href="#">お知らせ <span class="count">(5)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 最新記事 -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">最新記事</h3>
+                        <ul class="recent-posts">
+                            <li>
+                                <a href="#">
+                                    <div class="recent-post-img">
+                                        <img src="../img/S__25673797_0.jpg" alt="記事" loading="lazy">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <span class="recent-post-date">2026.02.01</span>
+                                        <p class="recent-post-title">2月の出店スケジュールのお知らせ</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="recent-post-img">
+                                        <img src="../img/S__25673789_0.jpg" alt="記事" loading="lazy">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <span class="recent-post-date">2026.01.25</span>
+                                        <p class="recent-post-title">今が旬！糸島あまおうの魅力</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="recent-post-img">
+                                        <img src="../img/S__25673762_0.jpg" alt="記事" loading="lazy">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <span class="recent-post-date">2026.01.20</span>
+                                        <p class="recent-post-title">JR博多シティでの出店レポート</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Instagram</h3>
+                        <a href="https://www.instagram.com/itoshima_fruitsparlor/?hl=ja" target="_blank" rel="noopener noreferrer" class="sidebar-instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                            <span>@itoshima_fruitsparlor</span>
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA -->
+    <section class="page-cta">
+        <div class="container">
+            <h2>出店依頼・ケータリング承ります</h2>
+            <p>イベントや企業イベントなど、様々なシーンで<br class="sp-only">糸島フルーツパーラーのスムージーをお届けします。</p>
+            <a href="../index.html#contact" class="cta-btn">お問い合わせはこちら</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-main">糸島フルーツパーラー</span>
+                        <span class="logo-sub">ITOSHIMA FRUITS PARLOR</span>
+                    </div>
+                    <address class="footer-address">
+                        〒819-1583<br>
+                        福岡県糸島市三雲135-2
+                    </address>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="../index.html#company">会社概要</a></li>
+                        <li><a href="../index.html#about">私たちについて</a></li>
+                        <li><a href="../index.html#products">商品情報</a></li>
+                        <li><a href="../index.html#producer">生産者情報</a></li>
+                        <li><a href="../index.html#works">出店実績</a></li>
+                        <li><a href="./">ブログ</a></li>
+                        <li><a href="../index.html#contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/itoshima_fruitsparlor/?hl=ja" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2021 糸島フルーツパーラー All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- トップへ戻るボタン -->
+    <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <script src="../script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>

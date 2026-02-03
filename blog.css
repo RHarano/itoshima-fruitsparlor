@@ -1,0 +1,814 @@
+/* ----------------------------------------
+   ブログページ専用スタイル
+   糸島フルーツパーラー
+   ---------------------------------------- */
+
+/* ページヒーロー（ブログ用） */
+.blog-hero {
+    min-height: 350px;
+}
+
+.blog-breadcrumb {
+    padding-top: 100px;
+}
+
+/* ブログページレイアウト */
+.blog-page {
+    padding: 60px 0 80px;
+    background: var(--cream);
+}
+
+.blog-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* カテゴリーフィルター */
+.blog-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 30px;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.category-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.category-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+/* 記事グリッド */
+.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+/* 記事カード */
+.post-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.post-card-link {
+    display: block;
+}
+
+.post-card-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.post-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.post-card:hover .post-card-img img {
+    transform: scale(1.05);
+}
+
+.post-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 14px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.post-card-content {
+    padding: 25px;
+}
+
+.post-date {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--gray-500);
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-family: var(--font-accent);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    transition: var(--transition-fast);
+}
+
+.post-card:hover .post-title {
+    color: var(--primary);
+}
+
+.post-excerpt {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ページネーション */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 50px;
+}
+
+.pagination-current,
+.pagination-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.pagination-current {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.pagination-link {
+    background: var(--white);
+    color: var(--gray-700);
+    border: 1px solid var(--gray-300);
+}
+
+.pagination-link:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.pagination-dots {
+    color: var(--gray-500);
+    padding: 0 5px;
+}
+
+.pagination-next {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 30px;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    margin-left: 10px;
+    transition: var(--transition-fast);
+}
+
+.pagination-next svg {
+    width: 16px;
+    height: 16px;
+}
+
+.pagination-next:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* サイドバー */
+.blog-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-widget {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+}
+
+.widget-title {
+    font-family: var(--font-accent);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary);
+}
+
+/* 検索フォーム */
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--gray-300);
+    border-radius: 10px;
+    font-size: 0.875rem;
+    transition: var(--transition-fast);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.search-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.search-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--white);
+}
+
+.search-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* カテゴリーリスト */
+.category-list {
+    list-style: none;
+}
+
+.category-list li {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+}
+
+.category-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    color: var(--gray-700);
+    font-size: 0.9375rem;
+    transition: var(--transition-fast);
+}
+
+.category-list a:hover {
+    color: var(--primary);
+}
+
+.category-list .count {
+    font-size: 0.8125rem;
+    color: var(--gray-500);
+}
+
+/* 最新記事 */
+.recent-posts {
+    list-style: none;
+}
+
+.recent-posts li {
+    margin-bottom: 15px;
+}
+
+.recent-posts li:last-child {
+    margin-bottom: 0;
+}
+
+.recent-posts a {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.recent-post-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.recent-post-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.recent-posts a:hover .recent-post-img img {
+    transform: scale(1.1);
+}
+
+.recent-post-content {
+    flex: 1;
+}
+
+.recent-post-date {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-bottom: 5px;
+}
+
+.recent-post-title {
+    font-size: 0.875rem;
+    color: var(--gray-800);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: var(--transition-fast);
+}
+
+.recent-posts a:hover .recent-post-title {
+    color: var(--primary);
+}
+
+/* Instagram リンク */
+.sidebar-instagram {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: linear-gradient(135deg, #833AB4 0%, #E1306C 50%, #F77737 100%);
+    border-radius: 12px;
+    color: var(--white);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition-normal);
+}
+
+.sidebar-instagram svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar-instagram:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.4);
+}
+
+/* ----------------------------------------
+   個別記事ページ
+   ---------------------------------------- */
+.single-post {
+    padding-top: 40px;
+}
+
+/* 記事コンテンツ */
+.post-content {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: var(--shadow-md);
+}
+
+/* 記事ヘッダー */
+.post-header {
+    margin-bottom: 25px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.post-category-label {
+    padding: 6px 16px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.post-content .post-date {
+    margin-bottom: 0;
+    color: var(--gray-600);
+}
+
+.post-main-title {
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    line-height: 1.5;
+}
+
+/* アイキャッチ画像 */
+.post-thumbnail {
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+/* 記事本文 */
+.post-body {
+    color: var(--gray-800);
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.post-body p {
+    margin-bottom: 1.5em;
+}
+
+.post-body h2 {
+    font-family: var(--font-accent);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: 2em 0 1em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.post-body h3 {
+    font-family: var(--font-accent);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: 1.5em 0 0.8em;
+}
+
+.post-body ul,
+.post-body ol {
+    margin: 1em 0 1.5em 1.5em;
+}
+
+.post-body li {
+    margin-bottom: 0.5em;
+}
+
+.post-body a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.post-body a:hover {
+    text-decoration: none;
+}
+
+/* 引用 */
+.post-body blockquote {
+    margin: 2em 0;
+    padding: 25px 30px;
+    background: var(--gray-100);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 15px 15px 0;
+    font-style: italic;
+}
+
+.post-body blockquote p {
+    margin-bottom: 0;
+    color: var(--gray-700);
+}
+
+/* 記事内画像 */
+.post-image {
+    margin: 2em 0;
+}
+
+.post-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.post-image figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--gray-600);
+}
+
+/* SNSシェア */
+.post-share {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.share-label {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+}
+
+.share-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.share-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.share-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.share-btn.twitter {
+    background: #000;
+    color: var(--white);
+}
+
+.share-btn.facebook {
+    background: #1877F2;
+    color: var(--white);
+}
+
+.share-btn.line {
+    background: #00B900;
+    color: var(--white);
+}
+
+.share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 前後の記事ナビゲーション */
+.post-navigation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.nav-prev,
+.nav-next {
+    display: block;
+    padding: 20px;
+    background: var(--gray-100);
+    border-radius: 12px;
+    transition: var(--transition-fast);
+}
+
+.nav-prev:hover,
+.nav-next:hover {
+    background: var(--gray-200);
+}
+
+.nav-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-bottom: 5px;
+}
+
+.nav-title {
+    font-size: 0.9375rem;
+    color: var(--gray-800);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.nav-next {
+    text-align: right;
+}
+
+/* 関連記事 */
+.related-posts {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.related-title {
+    font-family: var(--font-accent);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 25px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.related-card {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: var(--gray-100);
+    border-radius: 12px;
+    transition: var(--transition-fast);
+}
+
+.related-card:hover {
+    background: var(--gray-200);
+}
+
+.related-img {
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.related-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.related-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.related-date {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-bottom: 5px;
+}
+
+.related-content h3 {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--gray-800);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ----------------------------------------
+   レスポンシブ
+   ---------------------------------------- */
+@media (min-width: 768px) {
+    .blog-hero {
+        min-height: 400px;
+    }
+
+    .blog-page {
+        padding: 80px 0 100px;
+    }
+
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .post-card-img {
+        height: 180px;
+    }
+
+    .post-content {
+        padding: 40px;
+    }
+
+    .post-main-title {
+        font-size: 1.75rem;
+    }
+
+    .post-body h2 {
+        font-size: 1.5rem;
+    }
+
+    .post-share {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .post-navigation {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-layout {
+        grid-template-columns: 1fr 320px;
+        gap: 50px;
+    }
+
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .post-card-img {
+        height: 200px;
+    }
+
+    .post-content {
+        padding: 50px;
+    }
+
+    .post-main-title {
+        font-size: 2rem;
+    }
+
+    .related-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .related-card {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+        background: transparent;
+    }
+
+    .related-card:hover {
+        background: transparent;
+    }
+
+    .related-img {
+        width: 100%;
+        height: 120px;
+        border-radius: 12px;
+    }
+
+    .related-content {
+        padding: 0 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .blog-layout {
+        grid-template-columns: 1fr 350px;
+        gap: 60px;
+    }
+
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
